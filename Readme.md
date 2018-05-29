@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Сергей Козлов](https://up.htmlacademy.ru/htmlcss/21/user/682607).
-* Наставник: `Неизвестно`.
+* Наставник: [Владислав Балабанович](https://htmlacademy.ru/profile/balabanovich).
 
 ---
 
