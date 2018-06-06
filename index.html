@@ -8,62 +8,66 @@
 <body>
 	<header class="main-header">
 		<nav class="main-navigation">
-			<a href="#" class="main-header-logo">
-				<img src="#" alt="Логотип сайта Sedona"> 
+			<a href="#" class="main-navigation-logo-link">
+				<img class="main-navigation-logo" src="#" alt="Логотип сайта Sedona">
+				<!-- Нужно ли давать класс как ссылки  так и фото ?-->
 			</a>
-			<ul class="site-navigation">
-				<li><a href="#">Информация</a></li>
-				<li><a href="#">Фото и Видео</a></li>
-				<li><a href="#">Карта Штата</a></li>
-				<li><a href="catalog.html">Гостиницы</a></li>
+			<ul class="main-navigation-site">
+				<li class="main-navigation-link"><a href="info.html">Информация</a></li>
+				<li class="main-navigation-link"><a href="photo.html">Фото и Видео</a></li>
+				<li class="main-navigation-link"><a href="map.html">Карта Штата</a></li>
+				<li class="main-navigation-link"><a href="catalog.html">Гостиницы</a></li>
 			</ul>
 		</nav>
 	</header>
 
 	<main class="container">
-		<section class="intro">
-			<img src="#" width="" height="" alt="Горы Sedona"> 
+		<section class="intro">  
+			<img class="intro-img" src="#" width="" height="" alt="Горы Sedona"> 
 		</section>
 
 		<section class="advantages">
-			<h2 class="advantages-title">Седона - Небольшой городок в Аризоне,заслуживающий Большего!</h2>
-			<p class="advantages-descr">Рассмотрим 5 причин,по которым Седона круче,чем гранд каньон!</p> <!--Тут допускается писать с Заглавное буквы или все всегда с маленькой ?-->
+			<h2 class="advantages-title">Седона - Небольшой городок в Аризоне,заслуживающий ,большего!</h2>
+			<p class="advantages-descr">Рассмотрим 5 причин,по которым Седона круче,чем гранд каньон!</p>
 		</section>
 
 		<section class="advantages-block">
 			<div class="advantages-block-text">
-				<h3>Настоящий городок</h3>
-				<span>— №1 —</span> 
-				<p>Седона - не аттракцион для туристов,там течет своя жизнь</p>
+				<h3 class="advantages-block-title">Настоящий городок</h3>
+				<span class="advantages-block-number">— №1 —</span> 
+				<p class="advantages-block-descr">Седона - не аттракцион для туристов,там течет своя жизнь</p>
 			</div>
 			<div class="advantages-block-img">
-				<img src="#" width="" height="" alt="Вид Отеля"> <!--Тут допускается писать с Заглавное буквы или все всегда с маленькой ?-->
+				<img src="#" width="" height="" alt="Вид отеля">
 			</div>
 		</section>
 
 		<section class="reason-box">
-			<div class="reason-item"> 
-				<div class="reson-img"> <!-- background-image --> </div>  <!--Нужно ли делать отдельные div отдельно для текста и для картинки, если она вложенна через css+ так как картинки разные нужно их отдельно именовать классами или достаточно в css добавлять их по очереди? К слову поэтой причине я везде давал разные имена классам, так как не совсем до конца понимаю, вставляя изображения в css по очереди то браузер будет их рендерить слева на право, но допустим, если на сайт больше таких блоков не 3, 15 - то не проще дать класс каждому согласно его изображению, что бы в будущем иметь возможность быстрее заменить например картинку (иконку) и поддерживать сайт? -->
-				<div class="reason-text">
-					<h4>Жилье</h4>
-					<p>Рекомендую пожить в настоящем мотеле, все как в кино!</p>
+			<div class="reason-box-item">
+				<span class="reason-box-icon reson-icon-house"></span>
+				<!-- background-image -->
+				<div class="reason-box-text">
+					<h4 class="reason-item-title">Жилье</h4>  
+					<p class="reason-item-descr">Рекомендую пожить в настоящем мотеле, все как в кино!</p>
 				</div>  
 			</div>
 
-			<div class="reason-item">
-				<div class="reson-img"> <!-- background-image --> </div> 
-				<div class="reason-text">
-					<h4>Еда</h4>
-					<p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+			<div class="reason-box-item">
+				<span class="reason-box-icon reson-icon-food"></span>
+				<!-- background-image -->
+				<div class="reason-box-text">
+					<h4 class="reason-box-title">Еда</h4>
+					<p class="reason-box-descr">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
 				</div>
 			</div>
 
-				<div class="reason-item">
-				<div class="reson-img"> <!-- background-image --> </div>
-				<div class="reason-text">
-					<h4>Сувениры</h4>
-					<p>Не только китайского, но и местного производства!</p>
-				</div>
+			<div class="reason-box-item">
+			<span class="reason-box-icon reson-icon-souvenir"></span>
+			<!-- background-image -->
+			<div class="reason-box-text">
+				<h4 class="reason-box-title">Сувениры</h4>
+				<p class="reason-box-descr">Не только китайского, но и местного производства!</p>
+			</div>
 			</div> 
 		</section>
 
@@ -72,54 +76,53 @@
 				<img src="#" width="" height="" alt="Вид Каньона">
 			</div>
 			<div class="advantages-block-text">
-				<h3>Там есть Мост дьявола</h3>
-				<span>— №2 —</span>
-				<p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+				<h3 class="advantages-block-title">Там есть Мост дьявола</h3>
+				<span class="advantages-block-number">— №2 —</span>
+				<p class="advantages-block-descr">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
 			</div>
 		</section>
 
 		<section class="advantages-other">
-			<div>
-				<h3>Небольшая площадь</h3>
-				<span>— №3 —</span>
-				<p>Все достопримечательности находятся очень близко</p>
+			<div class="advantages-other-item">
+				<h3 class="advantages-other-title">Небольшая площадь</h3>
+				<span class="advantages-other-number">— №3 —</span>
+				<p class="advantages-other-descr">Все достопримечательности находятся очень близко</p>
 			</div>
-			<div>
-				<h3>Красивая дорога</h3>
-				<span>— №4 —</span>
-				<p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+			<div class="advantages-other-item">
+				<h3 class="advantages-other-title">Красивая дорога</h3>
+				<span class="advantages-other-number">— №4 —</span>
+				<p class="advantages-other-descr">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
 			</div>
-			<div>
-				<h3>Мало туристов</h3>
-				<span>— №5 —</span>
-				<p>Большинство едет в гранд каньон и толпится там</p>
+			<div class="advantages-other-item">
+				<h3 class="advantages-other-title">Мало туристов</h3>
+				<span class="advantages-other-number">— №5 —</span>
+				<p class="advantages-other-descr">Большинство едет в гранд каньон и толпится там</p>
 			</div>
 		</section>
 
 		<section class="offers-hottel">
-			<p>Заинтересовались ?</p>
-			<h3>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</h3>
-			<a href="#">Кнопка (Каталог) </a> <!--  Правильно ли я понял, это кнопка нужна будет если не будет работать js, и единственное ее применения будет переход на страницу с формой, тоесть как раз католог (catalog.html) и будет выступать адресом ссылки-->
+			<p class="offers-hottel-descr">Заинтересовались ?</p>
+			<h3 class="offers-hottel-title">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</h3>
+			<a class="offers-hottel-button"href="form.html">Кнопка </a>
 			<form action="" class="offers-hottel-form"></form>
 		</section>
 
 		<section class="map">
-			<img src="#" width="" height="" alt="Карта">
+			<img class="map-img" src="#" width="" height="" alt="Карта">
 		</section>
 	</main>
 
 	<footer class="main-footer">
-		<p>#visitSEDONA</p>
-			<!-- Список был вложен в div, ты показал, что его нужно убрать, не совсем понимаю причину, в скайпе скину тебе пример откуда я копировал код данного списка. Тот же вопрос у меня остался с изображения в css данных ссылок, тоже в css согласно порядка по списку их вставлять? -->
-			<ul class="footer-social">
-				<li><a class="social-button" href="#">twitter</a></li><!-- background-image -->
-				<li><a class="social-button" href="#">facebook</a></li><!-- background-image -->
-				<li><a class="social-button" href="#">youtube</a></li><!-- background-image -->
-			</ul>
-
+		<p class="main-footer-slogan">#visitSEDONA</p>
+		<ul class="main-footer-social">
+			<li class="main-footer-link"><a class="social-button twitter-button" href="#">twitter</a></li><!-- background-image -->
+			<li class="main-footer-link"><a class="social-button facebook-button" href="#">facebook</a></li><!-- background-image -->
+			<li class="main-footer-link"><a class="social-button youtube-button" href="#">youtube</a></li><!-- background-image -->
+		</ul>
+<!-- Обрати внимания пожалуйста на футер, правильно я понял, что классам ссылок нужно давать дополнительный класс, так как когда мы будет задать в css картинки, они будут разные. Еще я не совсем понял , правильно ли я задал класса отдельно для LI (перечня списка) и A (ссылок) -->
 		<div class="footer-copyright">
-			<b>Website by</b>
-			<a class="copyright-logo" href="https://htmlacademy.ru">HTML Academy</a><!-- background-image -->
+			<p class="footer-copyright-text">Website by</p>
+			<a class="footer-copyright-logo" href="https://htmlacademy.ru">HTML Academy</a><!-- background-image -->
 		</div>
 	</footer>
 

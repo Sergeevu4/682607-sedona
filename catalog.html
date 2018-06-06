@@ -8,106 +8,127 @@
 <body>
 	<header class="main-header">
 		<nav class="main-navigation">
-			<a href="index.html" class="main-header-logo">
-				<img src="#" alt="Логотип сайта Sedona"> 
+			<a href="#" class="main-navigation-logo-link">
+				<img class="main-navigation-logo" src="#" alt="Логотип сайта Sedona">  
 			</a>
-			<ul class="site-navigation">
-				<li><a href="#">Информация</a></li>
-				<li><a href="#">Фото и Видео</a></li>
-				<li><a href="#">Карта Штата</a></li>
-				<li class="site-nav igation-current"><a href="#">Гостиницы</a></li>
-			</ul>  
+			<ul class="main-navigation-site">
+				<li class="main-navigation-link"><a href="info.html">Информация</a></li>
+				<li class="main-navigation-link"><a href="photo.html">Фото и Видео</a></li>
+				<li class="main-navigation-link"><a href="map.html">Карта Штата</a></li>
+				<li class="main-navigation-link"><a href="catalog.html">Гостиницы</a></li>
+			</ul>
 		</nav>
 	</header>
+
 	<main class="container">
 		<h1 class="visually-hidden">Фильтр гостиниц</h1>
+
 		<section class="filters">
 			<form action="#"></form>
 		</section>
 
-		<section class="catalog-hottel">
-			<h2 class="visually-hidden">Каталог гостиниц</h2>
-			<ul class="catalog-hottel-list">
-				<li class="catalog-hottel-item">
-					<h3>
-						<a href="#">Amara Resort & Spa</a>
-							<span class="catalog-hottel-category">Гостиница</span>
-							<b class="catalog-hottel-item-price">от 4000 Р.</b>
-					</h3>
-					<p class="catalog-hottel-img">
-						<a href="#"><img src="#" alt="Гостиница Amara Resort & Spa"></a>
-					</p>
-					<p class="catalog-hottel-item">
-						<a href="#">Подробнее</a>
-					</p>
-					<p class="catalog-hottel-button">
-						<button class="catalog-button">Забронировать</button>
-					</p>
-				</li>
-				<li>
-					<h3>
-						<a href="#">Desert Quail Inn</a>
-							<span class="catalog-hottel-category">Мотель</span>
-							<b class="catalog-hottel-item-price">От 3000 Р.</b>
-					</h3>
-					<p class="catalog-hottel-img">
-						<a href="#"><img src="#" alt="Гостиница Desert Quail Inn"></a>
-					</p>
-					<p class="catalog-hottel-item">
-						<a href="#">Подробнее</a>
-					</p>
-					<p class="catalog-hottel-button">
-						<button class="catalog-button">Забронировать</button>
-					</p>
-				</li>
-				<li>
-					<h3>
-						<a href="#">Villas at Poco Diablo </a>
-							<span class="catalog-hottel-category">Апартаменты</span>
-							<b class="catalog-hottel-item-price">От 2000 Р.</b>
-					</h3>
-					<p class="catalog-hottel-img">
-						<a href="#"><img src="#" alt="Гостиница Villas at Poco Diablo"></a>
-					</p>
-					<p class="catalog-hottel-item">
-						<a href="#">Подробнее</a>
-					</p>
-					<p class="catalog-hottel-button">
-						<button class="catalog-button">Забронировать</button>
-					</p>
-				</li>
+		<section class="find">
+			<h2 class="find-title">Найдено: 3</h2>
+			<ul class="find-items"> <b>Сортировка:</b>
+				<li class="find-item "><a href="#">По цене</a></li>
+				<li class="find-item "><a href="#">По типу</a></li>
+				<li class="find-item "><a href="#">По рейтингу</a></li>
 			</ul>
+			<ul class="find-items-empty">
+				<li class="find-item-empty"><a href="#"></a></li>
+				<li class="find-item-empty"><a href="#"></a></li>
+			</ul>
+<!-- Ты упоминал,что тут будут два списка с ссылками, не совсем понял почему они тут нужны? Или все дело в том, что мы строим нефункциональную модель сайта, и из-за этого на местах где поле должно функционировать должна появляться ссылка ? 
+		Еще не понял нужно ли задавать дополнительный класс для списка find-item-empty (так как туда мы будем вставлять изображения через css или там же менять их превращая в треугольник, таже проблема меня мучает и по футеру)
+-->
 		</section>
 
-<section class="catalog-hottel">
-		<div>
-				<img src="#" alt="Фото Amara Resort & Spa">
-				<h3>Amara Resort & Spa</h3>
-				<span>Гостиница</span>
-				<span>от 4000 Р.</span>
-				<a href="#">Подробнее</a>
-				<a href="#">Забронировать</a>
-				<p>Рейтинг:8,5</p>  <!-- background-image, то есть я в этот p cvjue через css вставить картинку звезд -->  
-		</div>
-</section>
+		<section class="catalog-hottel">
+			<div class="hottel-item">
+				<div class="hottel-item-img">
+					<img src="#" alt="Фото Amara Resort & Spa"> 
+		<!-- Нужно ли задавать класс фото, если он вставляться через img? -->
+				</div>
+				<div class="hottel-item-info">
+					<h3 class="hottel-item-title">Amara Resort & Spa</h3>
+					<p class="hottel-item-descr">Гостиница</p>
+					<p class="hottel-item-cash">от 4000 Р.</p>
+					<!-- Заменил span на P, подумал так будет лучше. -->
+					<a class="hottel-link-detail" href="#" >Подробнее</a>
+					<a class="hottel-link-booking" href="#">Забронировать</a>
+					<!--Или нужно было задать два класса, так как основа у них общая, а цвет и размер разный -->
+				</div>
+				<div class="hottel-item-rate">
+					<div class="hottel-item-list">
+						<span class="hottel-list-star"></span>
+						<span class="hottel-list-star"></span>
+						<span class="hottel-list-star"></span>
+						<span class="hottel-list-star"></span>
+					</div>
+					<p class="hottel-item-rating">Рейтинг:8,5</p> 
+				</div>
+			</div>
 
+			<div class="hottel-item">
+				<div class="hottel-item-img">
+					<img class="catalog-hottel-img" src="#" alt="Фото Desert Quail Inn">
+				</div>
+				<div class="hottel-item-info">
+					<h3 class="hottel-item-title">Desert Quail Inn</h3>
+					<p class="hottel-item-descr">Мотель</p>
+					<p class="hottel-item-cash">От 3000 Р.</p>
+					<!-- Заменил span на P, подумал так будет лучше. -->
+					<a class="hottel-link-detail" href="#" >Подробнее</a>
+					<a class="hottel-link-booking" href="#">Забронировать</a>
+					<!--Или нужно было задать два класса, так как основа у них общая, а цвет и размер разный -->
+				</div>
+				<div class="hottel-item-rate">
+					<div class="hottel-item-list">
+						<span class="hottel-list-star"></span>
+						<span class="hottel-list-star"></span>
+						<span class="hottel-list-star"></span>
+					</div>
+					<p class="hottel-item-rating">Рейтинг:8,9</p> 
+				</div>
+			</div>
 
-
+			<div class="hottel-item">
+				<div class="hottel-item-img">
+					<img class="catalog-hottel-img" src="#" alt="Фото Villas at Poco Diablo">
+				</div>
+				<div class="hottel-item-info">
+					<h3 class="hottel-item-title">Villas at Poco Diablo</h3>
+					<p class="hottel-item-descr">Апартаменты</p>
+					<p class="hottel-item-cash">От 2000 Р.</p>
+					<!-- Заменил span на P, подумал так будет лучше. -->
+					<a class="hottel-link-detail" href="#" >Подробнее</a>
+					<a class="hottel-link-booking" href="#">Забронировать</a>
+					<!--Или нужно было задать два класса, так как основа у них общая, а цвет и размер разный -->
+				</div>
+				<div class="hottel-item-rate">
+						<div class="hottel-item-list">
+							<span class="hottel-list-star"></span>
+							<span class="hottel-list-star"></span>
+					</div>
+					<p class="hottel-item-rating">Рейтинг:9,2</p> 
+				</div>
+			</div>
+		</section>
+<!-- Сперва сделал три разных блока под каждый Отель, но потом пересмотрел наш разговор и насколько понял ты имел ввиду один section внутри которого три больших div, подскажи как лучше всего было делать, потому что насколько я понимаю разницы большой нет. -->
 
 	</main>
 		<footer class="main-footer">
-		<p>#visitSEDONA</p>
-		<div class="footer-copyright">
-			<b>Website by</b>
-			<a class="copyright-logo" href="https://htmlacademy.ru">HTML Academy</a><!-- background-image -->
-		</div>
-		<div class="footer-social">
-			<ul>
-			<li><a class="social-button" href="#">twitter</a></li><!-- background-image -->
-			<li><a class="social-button" href="#">facebook</a></li><!-- background-image -->
-			<li><a class="social-button" href="#">youtube</a></li><!-- background-image -->
+			<p class="main-footer-slogan">#visitSEDONA</p>
+			<ul class="main-footer-social">
+				<li class="main-footer-link"><a class="social-button twitter-button" href="#">twitter</a></li><!-- background-image -->
+				<li class="main-footer-link"><a class="social-button facebook-button" href="#">facebook</a></li><!-- background-image -->
+				<li class="main-footer-link"><a class="social-button youtube-button" href="#">youtube</a></li><!-- background-image -->
 			</ul>
-		</div>
-	</footer>
+	<!-- Обрати внимания пожалуйста на футер, правильно я понял, что классам ссылок нужно давать дополнительный класс, так как когда мы будет задать в css картинки, они будут разные. Еще я не совсем понял , правильно ли я задал класса отдельно для LI (перечня списка) и A (ссылок) -->
+			<div class="footer-copyright">
+				<p class="footer-copyright-text">Website by</p>
+				<a class="footer-copyright-logo" href="https://htmlacademy.ru">HTML Academy</a><!-- background-image -->
+			</div>
+		</footer>
 </body>
 </html>
