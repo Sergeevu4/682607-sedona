@@ -6,160 +6,123 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header class="main-header">
-	<nav class="main-navigation">
-		<a href="#" class="main-header-logo">
-			<img src="#" alt="Логотип сайта Sedona"> 
-		</a>
-		<ul class="site-navigation">
-			<li><a href="#">Информация</a></li>
-			<li><a href="#">Фото и Видео</a></li>
-			<li><a href="#">Карта Штата</a></li>
-			<li><a href="catalog.html">Гостиницы</a></li>
-		</ul>
-	</nav>
-</header>
+	<header class="main-header">
+		<nav class="main-navigation">
+			<a href="#" class="main-header-logo">
+				<img src="#" alt="Логотип сайта Sedona"> 
+			</a>
+			<ul class="site-navigation">
+				<li><a href="#">Информация</a></li>
+				<li><a href="#">Фото и Видео</a></li>
+				<li><a href="#">Карта Штата</a></li>
+				<li><a href="catalog.html">Гостиницы</a></li>
+			</ul>
+		</nav>
+	</header>
 
+	<main class="container">
+		<section class="intro">
+			<img src="#" width="" height="" alt="Горы Sedona"> 
+		</section>
 
-<main class="container">
-	<section class="intro">
-		<img src="#" alt="Горы Sedona"> <!-- background-image -->
-		<p class="intro-welcom"> Welcome </p>
-		<p class="intro-gorgeous"> -to the gorgeous- </p>
-		<h1 class="visually-hidden"> Sedona </h1>
-		<p class="intro-because"> "Because the grand Canyon sucks!"</p>
-	</section>
+		<section class="advantages">
+			<h2 class="advantages-title">Седона - Небольшой городок в Аризоне,заслуживающий Большего!</h2>
+			<p class="advantages-descr">Рассмотрим 5 причин,по которым Седона круче,чем гранд каньон!</p> <!--Тут допускается писать с Заглавное буквы или все всегда с маленькой ?-->
+		</section>
 
-	<section class="advantages">
-		<b class="advantages-all">Седона - Небольшой городок в Аризоне,заслуживающий Большего!</b>
-		<h2>Рассмотрим 5 причин,по которым Седона круче,чем гранд каньон!</h2>
-	</section>
-
-
-
-<!--  Не знаю какой правильный main, так как не знаю возможно ли потом нормально стилизовать в css список и картинки, если первый верный то, тогда доделаю его-->
-
-	<section class="advantages-one-blue">
-		<a href="#"><img src="#" alt="Вид Отеля"></a>
-		<h3>Настоящий городок</h3>
-		<span> - №1 -</span>
-		<b >Седона - не аттракцион для туристов,там течет своя жизнь</b>
-	</section>
-	<section class="reason-house">
-		<a class="House" href="#"><img src="#" alt="Жилье"></a><!-- background-image -->
-		<h4>Жилье</h4>
-		<b>Рекомендую пожить в настоящем мотеле, все как в кино!</b>
-	</section>
-	<section class="reason-Food">
-		<a class="Food" href="#"><img src="#" alt="Еда"></a> <!-- background-image -->
-		<h4>Еда</h4>
-		<b>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</b>
-	</section>
-		<section class="reason-Souvenirs">
-		<a class="Souvenirs" href="#"><img src="#" alt="Сувениры"></a> <!-- background-image -->
-		<h4>Сувениры</h4>
-		<b>Не только китайского, но и местного производства!</b>
-	</section>
-	<section class="advantages-two-blue">
-		<a href="#"><img src="#" alt="Вид Каньона"></a>
-		<h3>Там есть Мост дьявола</h3>
-		<p>— №2 —</p>
-		<b>Да, по нему можно пройти! Если конечно вы осмелитесь</b>
-	</section>
-	<section class="advantages-three">
-		<h3>Небольшая площадь</h3>
-		<p>— №3 —</p>
-		<b>Все достопримечательности находятся очень близко</b>
-	</section>
-	<section class="advantages-three">
-		<h3>Небольшая площадь</h3>
-		<p>— №3 —</p>
-		<b>Все достопримечательности находятся очень близко</b>
-	</section>
-	<section class="advantages-four">
-		<h3>Красивая дорога</h3>
-		<p>— №4 —</p>
-		<b>Ехать в Седону из Лас-Вегаса совсем не скучно!</b>
-	</section>
-	<section class="advantages-five">
-		<h3>Мало туристов</h3>
-		<p>— №5 —</p>
-		<b>Большинство едет в гранд каньон и толпится там</b>
-	</section>
-
-
-<hr>
-
-	<section class="advantages">
-		<ol class="advantages-table">
-			<li class="advantages-one-blue">
-				<a href="#"><img src="#" alt="Вид Отеля"></a>  
+		<section class="advantages-block">
+			<div class="advantages-block-text">
 				<h3>Настоящий городок</h3>
-				<p>— №1 —</p>
-				<b>Седона - не аттракцион для туристов,там течет своя жизнь</b>
-						<ul class="advantages-one-blue-reason">
-							<li> <!-- Боролся с тем, что если ul помещаешь в li, он тоже начинается нумероваться. Решил, что можно попробывать убрать лишние li и просто поместить список ul. Валидатор не ругается, Надеюсь мой комментарий будет понятен   -->
-								<a class="House" href="#"><img src="#" alt="Жилье"></a><!-- background-image -->
-								<h4>Жилье</h4>
-								<b>Рекомендую пожить в настоящем мотеле, все как в кино!</b>
-							</li>
-							<li>
-								<a class="Food" href="#"><img src="#" alt="Еда"></a> <!-- background-image -->
-								<h4>Еда</h4>
-								<b>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</b>
-							</li>
-							<li>
-								<a class="Souvenirs" href="#"><img src="#" alt="Сувениры"></a> <!-- background-image -->
-								<h4>Сувениры</h4>
-								<b>Не только китайского, но и местного производства!</b>
-						</ul>
-				</li>
-			<li class="advantages-two-blue">
-				<a href="#"><img src="#" alt="Вид Каньона"></a>
+				<span>— №1 —</span> 
+				<p>Седона - не аттракцион для туристов,там течет своя жизнь</p>
+			</div>
+			<div class="advantages-block-img">
+				<img src="#" width="" height="" alt="Вид Отеля"> <!--Тут допускается писать с Заглавное буквы или все всегда с маленькой ?-->
+			</div>
+		</section>
+
+		<section class="reason-box">
+			<div class="reason-item"> 
+				<div class="reson-img"> <!-- background-image --> </div>  <!--Нужно ли делать отдельные div отдельно для текста и для картинки, если она вложенна через css+ так как картинки разные нужно их отдельно именовать классами или достаточно в css добавлять их по очереди? К слову поэтой причине я везде давал разные имена классам, так как не совсем до конца понимаю, вставляя изображения в css по очереди то браузер будет их рендерить слева на право, но допустим, если на сайт больше таких блоков не 3, 15 - то не проще дать класс каждому согласно его изображению, что бы в будущем иметь возможность быстрее заменить например картинку (иконку) и поддерживать сайт? -->
+				<div class="reason-text">
+					<h4>Жилье</h4>
+					<p>Рекомендую пожить в настоящем мотеле, все как в кино!</p>
+				</div>  
+			</div>
+
+			<div class="reason-item">
+				<div class="reson-img"> <!-- background-image --> </div> 
+				<div class="reason-text">
+					<h4>Еда</h4>
+					<p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+				</div>
+			</div>
+
+				<div class="reason-item">
+				<div class="reson-img"> <!-- background-image --> </div>
+				<div class="reason-text">
+					<h4>Сувениры</h4>
+					<p>Не только китайского, но и местного производства!</p>
+				</div>
+			</div> 
+		</section>
+
+		<section class="advantages-block">
+			<div class="advantages-block-img">
+				<img src="#" width="" height="" alt="Вид Каньона">
+			</div>
+			<div class="advantages-block-text">
 				<h3>Там есть Мост дьявола</h3>
-				<p>— №2 —</p>
-				<b>Да, по нему можно пройти! Если конечно вы осмелитесь</b>
-			</li>
-			<li class="advantages-three">
+				<span>— №2 —</span>
+				<p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+			</div>
+		</section>
+
+		<section class="advantages-other">
+			<div>
 				<h3>Небольшая площадь</h3>
-				<p>— №3 —</p>
-				<b>Все достопримечательности находятся очень близко</b>
-			</li>
-			<li class="advantages-four">
+				<span>— №3 —</span>
+				<p>Все достопримечательности находятся очень близко</p>
+			</div>
+			<div>
 				<h3>Красивая дорога</h3>
-				<p>— №4 —</p>
-				<b>Ехать в Седону из Лас-Вегаса совсем не скучно!</b>
-			</li>
-			<li class="advantages-five">
+				<span>— №4 —</span>
+				<p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+			</div>
+			<div>
 				<h3>Мало туристов</h3>
-				<p>— №5 —</p>
-				<b>Большинство едет в гранд каньон и толпится там</b>
-			</li>
-	</ol> 
-	</section>
+				<span>— №5 —</span>
+				<p>Большинство едет в гранд каньон и толпится там</p>
+			</div>
+		</section>
 
-	<section class="offers-hottel">
-		<b>Заинтересовались ?</b>
-		<h3>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</h3>
-		<!-- Здесь будет форма -->
-	</section>
+		<section class="offers-hottel">
+			<p>Заинтересовались ?</p>
+			<h3>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</h3>
+			<a href="#">Кнопка (Каталог) </a> <!--  Правильно ли я понял, это кнопка нужна будет если не будет работать js, и единственное ее применения будет переход на страницу с формой, тоесть как раз католог (catalog.html) и будет выступать адресом ссылки-->
+			<form action="" class="offers-hottel-form"></form>
+		</section>
 
-<footer class="main-footer">
-	<p>#visitSEDONA</p>
-	<div class="footer-copyright">
-		<b>Website by</b>
-		<a class="copyright-logo" href="https://htmlacademy.ru">HTML Academy</a><!-- background-image -->
-	</div>
-	<div class="footer-social">
-		<ul>
-		<li><a class="social-button" href="#">twitter</a></li><!-- background-image -->
-		<li><a class="social-button" href="#">facebook</a></li><!-- background-image -->
-		<li><a class="social-button" href="#">youtube</a></li><!-- background-image -->
-		</ul>
-	</div>
-</footer>
+		<section class="map">
+			<img src="#" width="" height="" alt="Карта">
+		</section>
+	</main>
 
-</main>
+	<footer class="main-footer">
+		<p>#visitSEDONA</p>
+			<!-- Список был вложен в div, ты показал, что его нужно убрать, не совсем понимаю причину, в скайпе скину тебе пример откуда я копировал код данного списка. Тот же вопрос у меня остался с изображения в css данных ссылок, тоже в css согласно порядка по списку их вставлять? -->
+			<ul class="footer-social">
+				<li><a class="social-button" href="#">twitter</a></li><!-- background-image -->
+				<li><a class="social-button" href="#">facebook</a></li><!-- background-image -->
+				<li><a class="social-button" href="#">youtube</a></li><!-- background-image -->
+			</ul>
+
+		<div class="footer-copyright">
+			<b>Website by</b>
+			<a class="copyright-logo" href="https://htmlacademy.ru">HTML Academy</a><!-- background-image -->
+		</div>
+	</footer>
+
 </body>
 </html>
 
