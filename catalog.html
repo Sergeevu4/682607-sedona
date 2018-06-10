@@ -8,7 +8,7 @@
 <body>
 	<header class="main-header">
 		<nav class="main-navigation">
-			<a href="#" class="main-navigation-logo-link">
+			<a href="index.html" class="main-navigation-logo-link">
 				<img class="main-navigation-logo" src="img/logo.png" width="138" height="70" alt="Логотип сайта Sedona">
 			</a>
 			<ul class="main-navigation-site">
@@ -22,9 +22,45 @@
 
 	<main class="container">
 		<h1 class="visually-hidden">Фильтр гостиниц</h1>
-
-		<section class="filters">
-			<form action="#"></form>
+		<section class="filters-form">
+			<form action="https://echo.htmlacademy.ru" method="post" class="filters-form-catalog">
+				<div class="form-infrastructure">
+					<input type="checkbox" name="Bassein" id="Bassein" checked>
+					<label for="Bassein">Бассейн</label>
+					<br>
+					<input type="checkbox" name="Parking" id="Bassein">
+					<label for="Bassein">Парковка</label>
+					<br>
+					<input type="checkbox" name="wi-fi" id="wi-fi">
+					<label for="wi-fi">wi-fi</label>
+				</div>
+				<div class="form-housing">
+					<input type="checkbox" name="hotel" id="hotel" checked>
+					<label for="hotel">Отель</label>
+					<br>
+					<input type="checkbox" name="Motel" id="Motel" checked>
+					<label for="Motel">Парковка</label>
+					<br>
+					<input type="checkbox" name="Apartment" id="Apartment" checked>
+					<label for="Apartment">wi-fi</label>
+				</div>
+				<div class="form-priceday">
+					<div class="form-priceday-table">
+						<table class="form-priceday-table1">
+							<caption class="form-priceday-table-title"> Стоимость за сутки (Р)
+							<tr>
+								<td>От 0</td>
+								<td>До 3000</td>
+							</tr>
+							</caption>
+						</table>
+					</div>
+					<div class="form-priceday-table2">
+						<label for="slider"></label>
+						<input type="range" name="slider" id="slider" min="0" max="3000" step="1">
+					</div>
+				</div>
+			</form>
 		</section>
 
 		<section class="find">
@@ -35,8 +71,8 @@
 				<li class="find-item "><a href="#">По рейтингу</a></li>
 			</ul>
 			<ul class="find-items-empty">
-				<li class="find-item-empty"><a href="#"></a></li>
-				<li class="find-item-empty"><a href="#"></a></li>
+				<li class="find-item-empty1"><a href="#"></a></li>
+				<li class="find-item-empty2"><a href="#"></a></li>
 			</ul>
 <!-- Ты упоминал,что тут будут два списка с ссылками, не совсем понял почему они тут нужны? Или все дело в том, что мы строим нефункциональную модель сайта, и из-за этого на местах где поле должно функционировать должна появляться ссылка ? 
 		Еще не понял нужно ли задавать дополнительный класс для списка find-item-empty (так как туда мы будем вставлять изображения через css или там же менять их превращая в треугольник, таже проблема меня мучает и по футеру)
@@ -114,15 +150,14 @@
 				</div>
 			</div>
 		</section>
-<!-- Сперва сделал три разных блока под каждый Отель, но потом пересмотрел наш разговор и насколько понял ты имел ввиду один section внутри которого три больших div, подскажи как лучше всего было делать, потому что насколько я понимаю разницы большой нет. -->
 
 	</main>
 		<footer class="main-footer">
 			<p class="main-footer-slogan">#visitSEDONA</p>
 			<ul class="main-footer-social">
-				<li class="main-footer-link"><a class="social-button twitter-button" href="#">twitter</a></li><!-- background-image -->
-				<li class="main-footer-link"><a class="social-button facebook-button" href="#">facebook</a></li><!-- background-image -->
-				<li class="main-footer-link"><a class="social-button youtube-button" href="#">youtube</a></li><!-- background-image -->
+				<li class="main-footer-list"><a class="social-button social-button-twitter" href="#">twitter</a></li><!-- background-image -->
+				<li class="main-footer-list"><a class="social-button social-button-facebook" href="#">facebook</a></li><!-- background-image -->
+				<li class="main-footer-list"><a class="social-button social-button-youtube" href="#">youtube</a></li><!-- background-image -->
 			</ul>
 	<!-- Обрати внимания пожалуйста на футер, правильно я понял, что классам ссылок нужно давать дополнительный класс, так как когда мы будет задать в css картинки, они будут разные. Еще я не совсем понял , правильно ли я задал класса отдельно для LI (перечня списка) и A (ссылок) -->
 			<div class="footer-copyright">

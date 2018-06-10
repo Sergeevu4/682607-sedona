@@ -8,7 +8,7 @@
 <body>
 	<header class="main-header">
 		<nav class="main-navigation">
-			<a href="#" class="main-navigation-logo-link">
+			<a href="index.html" class="main-navigation-logo-link">
 				<img class="main-navigation-logo" src="img/logo.png" width="138" height="70" alt="Логотип сайта Sedona">
 				<!-- Нужно ли давать класс как ссылки  так и фото ?-->
 			</a>
@@ -22,7 +22,7 @@
 	</header>
 
 	<main class="container">
-		<section class="intro">  
+		<section class="intro">
 			<img class="intro-img" src="img/welcome.png" width="438" height="352" alt="Приветствие"> 
 		</section>
 
@@ -42,14 +42,15 @@
 			</div>
 		</section>
 
+
 		<section class="reason-box">
 			<div class="reason-box-item">
 				<span class="reason-box-icon reson-icon-house"></span>
 				<!-- background-image -->
 				<div class="reason-box-text">
-					<h4 class="reason-item-title">Жилье</h4>  
+					<h4 class="reason-item-title">Жилье</h4>
 					<p class="reason-item-descr">Рекомендую пожить в настоящем мотеле, все как в кино!</p>
-				</div>  
+				</div>
 			</div>
 
 			<div class="reason-box-item">
@@ -103,8 +104,59 @@
 		<section class="offers-hottel">
 			<p class="offers-hottel-descr">Заинтересовались ?</p>
 			<h3 class="offers-hottel-title">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</h3>
-			<a class="offers-hottel-button"href="form.html">Кнопка </a>
-			<form action="" class="offers-hottel-form"></form>
+			<a class="offers-hottel-button" href="form.html">Кнопка </a>
+			<!--Полагаю эта кнопка не нужна ?-->
+			<form action="https://echo.htmlacademy.ru" method="post" class="offers-hottel-form">
+				<fieldset class="offers-hottel-border">
+					<legend class="offers-hottel-search">Поиск гостиницы в Седоне</legend>
+					<div class="form-date-stay1">
+						<label for="form-arrival">Дата заезда:</label>
+						<input type="month" name="form-arrival" id="form-arrival" min="2017-01" max="2019-12">
+						<!-- Не понимаю как сделать на макете знаки отображения (24 апреля 2017), возможно нужно было input делать через text и туда через value - добавлять текст-->
+							<div class="form-date-stay-img1">
+								<a href="#"></a>
+								<!-- background-image Полагаю сюда надо вставлять картинку(иконку svg - календаря) -->
+							</div>
+					</div>
+					<div class="form-date-stay2">
+						<label for="form-leave">Дата выезда:</label>
+						<input type="month" name="form-leave" id="form-leave">
+							<div class="form-date-stay-img2">
+								<a href="#"></a>
+								<!-- background-image -->
+							</div>
+					</div>
+					<div class="form-date-people">
+						<label for="form-people">Взрослые:</label>
+						<input type="number" name="form-people" id="form-people" step="1" max="5" min="1" value ="2">
+					</div>
+					<div class="form-date-children">
+						<label for="form-children">Дети:</label>
+						<input type="number" name="form-children" id="form-children" step="1" max="5" min="1">
+						<!-- Не понимаю как сделать на макете знаки + и -, или картинки вставлять или все дело в браузере -->
+					</div>
+					<button class="form-date-button" type="submit">Найти</button>
+
+				<!-- Возможно надо было делать так -->
+				<legend class="offers-hottel-search">Поиск гостиницы в Седоне</legend>
+				<div class="form-date-stay1">
+					<label for="form-arrival">Дата заезда:</label>
+					<input type="text" name="form-arrival" id="form-arrival" value="24 апреля 2017">
+						<div class="form-date-stay-img1">
+							<a href="#"></a>
+							<!-- background-image Полагаю сюда надо вставлять картинку(иконку svg - календаря) -->
+						</div>
+				</div>
+				<div class="form-date-stay2">
+					<label for="form-leave">Дата выезда:</label>
+					<input type="text" name="form-leave" id="fform-leave" value="04 июля 2017">
+						<div class="form-date-stay-img2">
+							<a href="#"></a>
+							<!-- background-image -->
+						</div>
+				</div>
+				</fieldset>
+			</form>
 		</section>
 
 		<section class="map">
@@ -115,9 +167,9 @@
 	<footer class="main-footer">
 		<p class="main-footer-slogan">#visitSEDONA</p>
 		<ul class="main-footer-social">
-			<li class="main-footer-link"><a class="social-button twitter-button" href="#">twitter</a></li><!-- background-image -->
-			<li class="main-footer-link"><a class="social-button facebook-button" href="#">facebook</a></li><!-- background-image -->
-			<li class="main-footer-link"><a class="social-button youtube-button" href="#">youtube</a></li><!-- background-image -->
+			<li class="main-footer-list"><a class="social-button social-button-twitter" href="#">twitter</a></li><!-- background-image -->
+			<li class="main-footer-list"><a class="social-button social-button-facebook" href="#">facebook</a></li><!-- background-image -->
+			<li class="main-footer-list"><a class="social-button social-button-youtube" href="#">youtube</a></li><!-- background-image -->
 		</ul>
 <!-- Обрати внимания пожалуйста на футер, правильно я понял, что классам ссылок нужно давать дополнительный класс, так как когда мы будет задать в css картинки, они будут разные. Еще я не совсем понял , правильно ли я задал класса отдельно для LI (перечня списка) и A (ссылок) -->
 		<div class="footer-copyright">
