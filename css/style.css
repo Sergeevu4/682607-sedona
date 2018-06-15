@@ -1,0 +1,478 @@
+body {
+	margin: 0;
+	padding: 0;
+
+	font-family: "PT Sans", Arial, sans-serif;
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: 400;
+	color: #333333;
+	text-transform: uppercase;
+
+	background-color: #ffffff;
+}
+
+a {
+	text-decoration: none;
+}
+
+.main-navigation {
+	font-size: 14px;
+	line-height: 26px;
+	color: #333333;
+
+	background-color: #ffffff;
+}
+
+.main-navigation-site {
+	list-style: none;
+}
+
+.main-navigation-site a{
+	color: #000000;
+}
+
+.intro {
+	background-color: #81b3d2;
+	/* Если указать фот белый то тогда, не будет видна надпись белую на картинке */
+	background-image: url("../img/background-photo.jpg");
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: 1200px 773px;
+	background-origin: border-box;
+	/* Нужно было задавать background-origin: border-box;
+	Не понимаю как сделать фотографии больше, как на макете */
+	text-align:center;
+}
+
+
+.advantages-title {
+	font-size: 21px;
+	line-height: 26px;
+	color: #000000;
+	font-weight: 700;
+	text-align: center;
+	/* Нужно было задавать vertical-align ? */
+}
+
+.advantages-descr {
+	font-size: 14px;
+	line-height: 26px;
+	color: #333333;
+	font-weight: 400;
+	text-align: center;
+}
+
+.advantages-block-text{
+	color: #ffffff;
+	text-align: center;
+	background-color: #81b3d2;
+}
+
+.advantages-block-title {
+	font-size: 21px;
+	line-height: 21px;
+	font-weight: 700;
+}
+
+.advantages-block-number,
+.advantages-block-descr {
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: 400;
+}
+
+.reason-box {
+	text-align: center;
+	background-color: #ffffff;
+}
+
+.reason-box-icon .icon-house {
+	background-image: url("../img/icon-1.svg");
+	background-size: 75px 72px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+/* Писал проблему о фото в скайпе */
+
+.reason-box-title {
+	color: #000000;
+	font-size: 21px;
+	line-height: 21px;
+	font-weight: 700;
+}
+
+.reason-box-descr {
+	color: #333333;
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: 400;
+}
+
+.advantages-other-item {
+	color: #333333;
+	text-align: center;
+	background-color: #eeeeee;
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: 400;
+}
+
+/* Основные стили для 
+advantages-other-number
+advantages-other-descr
+- задал через родителя, правильно ?
+ */
+
+.advantages-other-title {
+	color: #000000;
+	font-size: 21px;
+	line-height: 21px;
+	font-weight: 700;
+}
+
+.offers-hottel {
+	text-align: center;
+	background-color: #ffffff;
+}
+
+.offers-hottel-title {
+	color: #000000;
+	font-size: 30px;
+	line-height: 36px;
+	font-weight: 700;
+}
+
+.offers-hottel-descr {
+	color: #333333;
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: 400;
+}
+
+
+.offers-hottel-button {
+	color: #ffffff;
+	background-color: #766357;
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700;
+	text-align: center;
+	vertical-align: middle;
+	border: none;
+}
+.offers-hottel-button:hover,
+.offers-hottel-button:focus {
+	background-color: #604e43;
+}
+
+/* Не понял когда использовать hover,а когда focus ?
+ */
+
+.offers-hottel-button:active{
+	color:#847870;
+	background-color: #503e33;
+}
+
+.popup-form-control label,
+.popup-form-grid label {
+	color: #000000;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 26px;
+}
+
+.popup-form-control input,
+.popup-form-grid input {
+	color: #000000;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 26px;
+	background-color: #f2f2f2;
+	border:none;
+}
+
+.popup-form-control input::placeholder, 
+.popup-form-grid input::placeholder {
+	color: #000000;
+	font-weight: 700;
+
+}
+
+.popup-form-control input:hover {
+	background-color: #ebebeb;
+}
+
+.popup-form-control input:focus {
+	border: 2px solid #e5e5e5;
+	background-color: #ffffff;
+}
+
+.btn-popup {
+	color: #a9a9a9;
+	font-weight: 700;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #f2f2f2;
+	border:none;
+}
+
+/* Как быть с размерами текста кнопки, то есть + или -, нужно ли их задавать?*/
+
+.btn-popup:hover,
+.btn-popup:focus {
+	color: #000000;
+}
+
+.btn-popup:active {
+	color:#81b3d2;
+}
+
+.popup-form-icon-calendar {
+	background-image: url("../img/calendar.svg");
+	width: 21px;
+	height: 22px;
+	background-color: #a9a9a9;
+}
+.popup-form-icon-calendar::after {
+	background-image: url("../img/calendar.svg");
+	width: 21px;
+	height: 22px;
+}
+
+/*Кучу времени убил на то, чтобы понять почему картинку не видно, если ничего не прописываешь в span, то тогда ее не видно. Насколько понял это из-зто того что размер спана без контента 0, но я же вроде и размеры задал и высоту  */
+
+.popup-form-submit {
+	color: #ffffff;
+	font-size: 21px;
+	font-weight: 700;
+	line-height: 26px;
+	background-color: #81b3d2;
+	border:none;
+	text-transform: uppercase;
+	/*text-transform: uppercase; Нужно прописывать только кнопкам ?*/
+}
+
+.popup-form-submit:hover,
+.popup-form-submit:focus {
+	background-color: #669ec0;
+}
+
+.popup-form-submit:active {
+	color: #87b6d1;
+	background-color: #5496bd;
+}
+
+.main-footer {
+	color: #000000;
+	background-color: #ffffff;
+	opacity: 0.9;
+	text-align: center;
+}
+
+.main-footer-slogan {
+	color: #000000;
+	font-size: 21px;
+	font-weight: 700;
+	line-height: 26px;
+}
+
+.main-footer-list{
+	list-style: none;
+}
+
+.social-btn {
+	background-color: #81b3d2;
+	color:transparent;
+	overflow:hidden;
+	/*Так прятать текст в ссылке, но текст все же можно выделить((( или поступить как visually-hidden, которые скрывает текс внутри заголовков*/
+}
+
+
+.footer-copyright-text {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 26px;
+}
+
+/*****                  catalog.html                      ******/
+
+
+
+.inner-page {
+	margin: 0;
+	padding: 0;
+
+	font-family: "PT Sans", Arial, sans-serif;
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: 400;
+	color: #000000;
+	text-transform: uppercase;
+	background-color: #ffffff;
+
+/*Обязательно предопределять для второй странице, если меняется только цвет текста?*/
+}
+
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+		/*Так правильно прятать элементы, можно было так спрятать текст в ссылках?*/
+	}
+
+.filters-form {
+	background-color: #81b3d2;
+	background-image: url("../img/filter-background.jpg");
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-origin: border-box;
+	text-align: center;
+	color: #ffffff;
+	/*Такая же проблема что и фоновым изображением главной страницы, я совсем запутался с background, что отвечает за то как изображения будет обрезаться согласно необходимости,background-origin или background-clip? Может они тут вовсе не нужны и надо было просто задать ширину и высоту блоку ?*/
+}
+
+.form-infrastructure-title {
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 21px;
+}
+
+.form-catalog {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 21px;
+}
+
+.form-catalog input[type="checkbox"]{
+	color: #ffffff;
+	/*Не понял как сделать прозрачный checkbox,пробовал через background-color: transparent, opacity: 0 - но она полностью делает их прозрачными?*/
+}
+.filters-form-submit {
+	color: #ffffff;
+	font-size: 12px;
+	line-height: 18px;
+	font-weight: 400;
+	background-color: transparent;
+	border: 2px solid #ffffff;
+	text-transform: uppercase;
+}
+
+.filters-form-submit:hover,
+.filters-form-submit:focus{
+	color: #000000;
+	border: 2px solid #ffffff;
+	background-color: #ffffff;
+}
+
+.form-priceday-table {
+	border: 2px solid #ffffff;
+	boreder-collape: collapse; 
+	/*Пытался убрать жирную линию внизу таблицы, boreder-collape: collapse действует только для Таблиц? */
+}
+
+.form-priceday-table input {
+	color: #ffffff;
+	background-color: transparent;
+	border: none;
+}
+
+.form-priceday-table input::placeholder{
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 21px;
+	text-transform: uppercase;
+}
+
+.find {
+
+}
+
+.find-title {
+	color: #000000;
+	font-size: 21px;
+	font-weight: 700;
+	line-height: 26px;
+}
+
+.find-items {
+	color: #000000;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 18px;
+	list-style: none
+}
+
+
+.find-item a {
+	color: #b2b2b2;
+	/* Задал класс для ссылок find-item-link, пытался на них влиять через напрямую класс, но вышло только через родителя, правильно? */
+}
+
+.find-item a:hover {
+	color: #81b3d2;
+}
+
+.find-item a:active {
+	color: #000000;
+}
+
+/*
+.find-current a:visited {
+	color: #81b3d2;
+	Попытался задать цвет голубой для цены, добавил дополнительный класс, не получилось. Точно так же как и пунктом меню Навигация*/
+
+.find-items-empty {
+	list-style: none
+}
+
+.hottel-item-title {
+	color: #000000;
+	font-size: 21px;
+	font-weight: 700;
+	line-height: 26px;
+}
+
+.hottel-item-descr,
+.hottel-item-cash{
+	color: #333333;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 21px;
+}
+
+.hottel-item-btn a{
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 21px;
+}
+
+a.btn-blue {
+	background-color: #81b3d2;
+}
+
+a.btn-brown {
+	background-color:#766357;
+}
+
+	/* Не понимаю, почему я пришлось использовать селектор, если есть классы, но с ними оформить у меня не вышло */
+
+.hottel-list-star {
+	background-image: url("../img/star.svg");
+}
+
+.hottel-item-rating {
+	color: #666666;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 21px;
+	background-color: #f2f2f2;
+}
