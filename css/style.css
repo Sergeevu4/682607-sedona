@@ -428,6 +428,8 @@ input[type="radio"].visually-hidden {
 .popup-form-control-half{
 	display: flex;
 	align-items: center;
+
+	position: relative;
 }
 
 .popup-form-control input{
@@ -440,7 +442,10 @@ input[type="radio"].visually-hidden {
 
 
 .popup-form-count input{
-	width: 38px;
+	box-sizing: border-box;
+	width: 114px;
+	height: 38px;
+	text-align: center;
 }
 
 .popup-form-control label,
@@ -490,16 +495,28 @@ input[type="radio"].visually-hidden {
 }
 
 .popup-form-icon-calendar {
-	display: block;
+/*	display: block;
 	background-image: url("../img/calendar.svg");
 	background-size: cover;
-	background-repeat: no-repeat;
+	background-repeat: no-repeat;*/
 
+	position: absolute;
+	padding: 0;
+	background: none;
+	border: none;
+	cursor: pointer;
+	fill: #c9c9c9;
 	width: 21px;
 	height: 22px;
-	position: absolute;
-	opacity: 0.4;
 	left: 85%;
+}
+
+.popup-form-icon-calendar:hover path{
+	fill: #000000;
+}
+
+.popup-form-icon-calendar:active path{
+	fill: #81b3d2;
 }
 
 
@@ -511,21 +528,54 @@ input[type="radio"].visually-hidden {
 	background-color: #f2f2f2;
 	border:none;
 	
-	display: inline-block;
+
+	position: absolute;
 	width: 38px;
 	height: 38px;
 	margin: 0;
 	padding: 0;
 }
 
-
-
-.btn-popup:hover {
-	color: #000000;
+.btn-min {
+	left: 98px;
 }
 
-.btn-popup:active {
-	color:#81b3d2;
+.btn-plus {
+	top: 0;
+	left: 174px;
+}
+
+.btn-min::before,
+.btn-plus::before{
+	content: "";
+	width: 11px;
+	height: 3px;
+	background-color: #a9a9a9;
+	position: absolute;
+	left: 14px;
+}
+
+.btn-plus::after {
+	content: "";
+	width: 11px;
+	height: 3px;
+	background-color: #a9a9a9;
+	position: absolute;
+	left: 14px;
+	transform: rotate(90deg);
+}
+
+
+.btn-min:hover::before,
+.btn-plus:hover::before,
+.btn-plus:hover::after {
+	background-color:#000000;
+}
+
+.btn-min:active::before,
+.btn-plus:active::before,
+.btn-plus:active::after {
+	background-color:#81b3d2;
 }
 
 
@@ -559,8 +609,6 @@ input[type="radio"].visually-hidden {
 }
 
 
-
-
 .main-footer {
 	color: #000000;
 	background-color: rgba(255, 255, 255, 0.9);
@@ -569,8 +617,11 @@ input[type="radio"].visually-hidden {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	padding-top: 30px;
-	padding-bottom: 30px;
+	flex-wrap: wrap;
+	margin-top: -120px;
+	position: relative;
+
+	min-height: 120px;
 }
 
 .main-footer-slogan {
@@ -580,29 +631,34 @@ input[type="radio"].visually-hidden {
 	line-height: 26px;
 
 	width: 136px;
+/*	width: 33.333%;*/
 	margin: 0;
 }
 
-.main-footer-social {
+
+
+.main-footer-social{
 	list-style: none;
+	padding: 0;
+	margin: 0;
 
 	width: 150px;
+/*	width: 33.333%;*/
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	margin: 0;
 /*	margin: 0 auto;*/
 /*Обнулим внутренние отступы у списка и отцентруем его с помощью внешних отступов.*/
-	padding: 0;
 }
 
 .main-footer-list{
 }
 
 .footer-copyright {
+	width: 198px;
+/*	width: 33.333%;*/
 	display: flex;
-	width: 197px;
-
+	
 	justify-content: space-between;
 	align-items: center;
 }
@@ -618,13 +674,33 @@ input[type="radio"].visually-hidden {
 	justify-content: center;
 }
 
-/*.social-btn-twitter {
+.social-btn-twitter::before {
+	content: "";
 	background-image: url(../img/twitter.svg);
 	width: 17px;
 	height: 15px;
 	background-size: cover;
 	background-repeat: no-repeat;
-}*/
+}
+
+.social-btn-facebook::before {
+	content: "";
+	background-image: url(../img/facebook.svg);
+	width: 12px;
+	height: 22px;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.social-btn-youtube::before {
+	content: "";
+	background-image: url(../img/youtube.svg);
+	width: 20px;
+	height: 16px;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
 
 .social-btn:hover {
 	background-color: #669ec0;
@@ -634,8 +710,10 @@ input[type="radio"].visually-hidden {
 	background-color: #5496bd;
 }
 
-.social-btn::active path {
-	fill: red;
+.social-btn-twitter:active::before,
+.social-btn-facebook:active::before, 
+.social-btn-youtube:active::before {
+	opacity: 0.3;
 }
 
 .footer-copyright-text {
@@ -654,4 +732,154 @@ input[type="radio"].visually-hidden {
 	fill: #bdbbbc;
 }
 
+
+/*вторая страница */
+
+.filters-form {
+	background-color: #81b3d2;
+	background-image: url("../img/filter-background.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	text-align: center;
+	color: #ffffff;
+}
+
+.form-infrastructure-title {
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 21px;
+}
+
+.form-catalog {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 21px;
+}
+
+.form-catalog input[type="checkbox"]{
+	color: #ffffff;
+	/*Не понял как сделать прозрачный checkbox,пробовал через background-color: transparent, opacity: 0 - но она полностью делает их прозрачными?*/
+}
+.filters-form-submit {
+	color: #ffffff;
+	font-size: 12px;
+	line-height: 18px;
+	font-weight: 400;
+	background-color: transparent;
+	border: 2px solid #ffffff;
+	text-transform: uppercase;
+}
+
+.filters-form-submit:hover,
+.filters-form-submit:focus{
+	color: #000000;
+	border: 2px solid #ffffff;
+	background-color: #ffffff;
+}
+
+.form-priceday-table {
+	border: 2px solid #ffffff;
+	boreder-collape: collapse; 
+	/*Пытался убрать жирную линию внизу таблицы, boreder-collape: collapse действует только для Таблиц? */
+}
+
+.form-priceday-table input {
+	color: #ffffff;
+	background-color: transparent;
+	border: none;
+}
+
+.form-priceday-table input::placeholder{
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 21px;
+	text-transform: uppercase;
+}
+
+.find {
+
+}
+
+.find-title {
+	color: #000000;
+	font-size: 21px;
+	font-weight: 700;
+	line-height: 26px;
+}
+
+.find-items {
+	color: #000000;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 18px;
+	list-style: none
+}
+
+
+.find-item a {
+	color: #b2b2b2;
+	/* Задал класс для ссылок find-item-link, пытался на них влиять через напрямую класс, но вышло только через родителя, правильно? */
+}
+
+.find-item a:hover {
+	color: #81b3d2;
+}
+
+.find-item a:active {
+	color: #000000;
+}
+
+/*
+.find-current a:visited {
+	color: #81b3d2;
+	Попытался задать цвет голубой для цены, добавил дополнительный класс, не получилось. Точно так же как и пунктом меню Навигация*/
+
+.find-items-empty {
+	list-style: none
+}
+
+.hottel-item-title {
+	color: #000000;
+	font-size: 21px;
+	font-weight: 700;
+	line-height: 26px;
+}
+
+.hottel-item-descr,
+.hottel-item-cash{
+	color: #333333;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 21px;
+}
+
+.hottel-item-btn a{
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 21px;
+}
+
+a.btn-blue {
+	background-color: #81b3d2;
+}
+
+a.btn-brown {
+	background-color:#766357;
+}
+
+	/* Не понимаю, почему я пришлось использовать селектор, если есть классы, но с ними оформить у меня не вышло */
+
+.hottel-list-star {
+	background-image: url("../img/star.svg");
+}
+
+.hottel-item-rating {
+	color: #666666;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 21px;
+	background-color: #f2f2f2;
+}
 
