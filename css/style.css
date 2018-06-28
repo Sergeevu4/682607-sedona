@@ -17,7 +17,6 @@ a {
 	text-decoration: none;
 }
 
-
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
@@ -58,28 +57,29 @@ input[type="radio"].visually-hidden {
 .main-navigation-site {
 	list-style: none;
 	display: flex;
-	/* justify-content: space-around; */
-	/*flex-wrap: wrap; */
+	flex-wrap: wrap; 
 	margin: 0;
 	padding:0;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
 .main-navigation-link {
-	width: 239px;
-	/* flex-grow: 1; */
-	Нужно лишкам задавать четкую ширину ?
+	width: 20%;
+	text-align: center;
 }
 
-.main-navigation-link:nth-child(2) {
-	margin-right: 246px;
+.main-navigation-link:nth-child(4n+2) {
+	margin-right: 20%;
 }
 
 .main-navigation-site a{
 	color: #000000;
-	display: block;
-	padding: 14px 0px;
-	padding-bottom: 17px;
-	text-align:  center;
+}
+
+.main-navigation-link:nth-child(4n+4) a
+{
+	margin-right: -15px;
 }
 
 .main-navigation-site a:hover{
@@ -97,6 +97,7 @@ input[type="radio"].visually-hidden {
 	/* top: 0px; */
 	/*z-index: 1; Решает проблему, что лого перекрывается фоном гор*/ 
 /*	/*Нужно задавать контейнеру с абсолютным позиционированием размеры ? */
+	z-index:  1;
 }
 
 .main-navigation-logo {
@@ -111,11 +112,10 @@ input[type="radio"].visually-hidden {
 	background-repeat: no-repeat;
 	background-size: cover;
 	text-align: center;
-	padding-top: 76px;
+	padding-top: 75px;
 	padding-bottom: 74px;
 	background-position: 0px -83px;
-
-/*	position: relative;*/
+	position: relative;
  /*Если мы позиционируем согласно родителю то тогда часть лого скрывается под ним, решил что лучше тогда позиционировать согласно первому и ближайшему родителю - список */
 }
 
@@ -130,7 +130,7 @@ input[type="radio"].visually-hidden {
 	position: absolute;
 	/*	left: 0;
 	bottom: 0;*/
-	top: 508px;
+	top: 451px;
 }
 
 .intro-img {
@@ -139,8 +139,10 @@ input[type="radio"].visually-hidden {
 }
 
 .advantages {
-	width: 1200px;
+	width: 100%;
 	/*Нужно задавать родительскому контейнеру ширину ?*/
+	padding-top: 44px;
+	padding-bottom: 38px;
 }
 
 .advantages-title {
@@ -150,12 +152,8 @@ input[type="radio"].visually-hidden {
 	font-weight: 700;
 	text-align: center;
 
-	width: 440px;
-	margin: 0;
-	padding-top: 60px;
-	padding-left: 381px;
-	padding-right: 381px;
-	padding-bottom: 17px;
+	padding-left: 25%;
+	padding-right: 25%;
 }
 
 .advantages-descr {
@@ -164,12 +162,7 @@ input[type="radio"].visually-hidden {
 	color: #333333;
 	font-weight: 400;
 	text-align: center;
-	width: 489px;
-	margin: 0;
-	padding-top: 10px;
-	padding-left: 357px;
-	padding-right: 357px;
-	padding-bottom: 51px;
+	padding-top: 8px;
 }
 
 .advantages-block {
@@ -184,19 +177,19 @@ input[type="radio"].visually-hidden {
 	color: #ffffff;
 	text-align: center;
 	width: 400px;
-	padding: 57px 50px;
-	padding-bottom: 45px;
+	padding-top: 46px;
+	padding-bottom: 30px;
 }
 
 .advantages-block-title {
 	font-size: 21px;
 	font-weight: 700;
 
-/*	margin: 0;*/
-/*	padding-top: 40px;
-	padding-left: 50px;
-	padding-right: 50px;
-	padding-bottom: 0px;*/
+	padding-right: 25%;
+	padding-left: 25%;
+	padding-bottom: 15px;
+	margin-top: 0;
+	margin-bottom: 9px;
 }
 
 .advantages-block-number {
@@ -205,7 +198,11 @@ input[type="radio"].visually-hidden {
 }
 
 .advantages-block-descr {
-/*	margin: 0;*/
+	padding-right: 12%;
+	padding-left: 12%;
+	padding-bottom: 15px;
+	margin-top: 22px;
+	margin-bottom: 9px;
 }
 
 
@@ -226,6 +223,7 @@ input[type="radio"].visually-hidden {
 
 
 .reason-box {
+	width: 100%;
 	display: flex;
 	text-align: center;
 	background-color: #ffffff;
@@ -234,32 +232,34 @@ input[type="radio"].visually-hidden {
 }
 
 .reason-box-item {
-	padding-top: 61px;
-	padding-left: 58px;
-	padding-right: 67px;
-	padding-bottom: 60px;
+	width:400px;
+	padding-top: 136px;
+	padding-left: 50px;
+	padding-right: 50px;
+	/* padding-bottom: 60px; */
+	position: relative;
 
-	/*Нужно убирать инлайновые стили у h1 и у P ?*/;
+	/*Нужно убирать инлайновые стили у h1 и у P ?*/
 	/* color: black; */
 }
 
 .reason-box-icon {
 	display: block;
-
 	margin: 0 auto;
-
+	position: absolute;
+	left: 50%;
+	top: 60px;
 }
 
 .icon-house {
 	background-image: url("../img/icon-1.svg");
 	width: 75px;
 	height: 72px;
-
 	/*background-size: cover;*/
 	/*Этот css правило никак и ни на что не влияет ,зачем оно тут ? второе дает возможность подстроить элемент*/
 	/*background-position: 0 0;*/
-
 	background-repeat: no-repeat;
+	margin-left: -37.5px;
 }
 
 .icon-food {
@@ -268,6 +268,7 @@ input[type="radio"].visually-hidden {
 	height: 70px;
 	background-repeat: no-repeat;
 	background-size: cover;
+	margin-left: -37px;
 }
 
 .icon-souvenir {
@@ -276,6 +277,8 @@ input[type="radio"].visually-hidden {
 	height: 76px;
 	background-size: cover;
 	background-repeat: no-repeat;
+	margin-left: -32px;
+	margin-top: -4px;
 }
 
 .reason-box-title {
@@ -283,6 +286,7 @@ input[type="radio"].visually-hidden {
 	font-size: 21px;
 	line-height: 21px;
 	font-weight: 700;
+	margin: 25px 20px;
 }
 
 .reason-box-descr {
@@ -290,6 +294,9 @@ input[type="radio"].visually-hidden {
 	font-size: 14px;
 	line-height: 21px;
 	font-weight: 400;
+	/* margin: 5px 6px; */
+	/* padding-top: 5px; */
+	padding-bottom: 67px;
 }
 
 .advantages-other {
@@ -305,15 +312,9 @@ input[type="radio"].visually-hidden {
 	font-size: 14px;
 	line-height: 21px;
 	font-weight: 400;
-
 	width: 400px;
 	margin: 0 auto;
-	/*Правильно ли сделал что задал фиксированию ширину у блоков и центрировал их?*/
-
-	padding-top: 56px;
-	padding-left: 60px;
-	padding-right: 74px;
-	padding-bottom: 45px;
+	padding-top: 40px;
 }
 
 .advantages-other-title {
@@ -321,22 +322,29 @@ input[type="radio"].visually-hidden {
 	font-size: 21px;
 	line-height: 21px;
 	font-weight: 700;
+	margin-left: 30%;
+	margin-right: 30%;
+	margin-top: 8px;
+}
 
-/*	margin: 0;*/
+.advantages-other-number {
+	display: inline-block;
 }
 
 .advantages-other-descr {
-/*	margin: 0;*/
-	/*Стандартный отступ у p и h3 */
-}
+	margin: 0;
+	padding-top: 22px;
+	padding-right: 9%;
+	padding-left: 9%;
+	padding-bottom: 60px;
+	}
 
 
 
 .offers-hottel {
 	background-color: #ffffff;
-	position: relative;
-
-/*	padding-top: 21px;
+	/* position: relative; */
+	/*	padding-top: 21px;
 	padding-left: 79px;
 	padding-right: 76px;
 	padding-bottom: 25px;*/
@@ -345,13 +353,12 @@ input[type="radio"].visually-hidden {
 
 .offers-hottel-text {
 	text-align: center;
-	width: 434px;
-	margin: 0 auto;
-	padding-top: 21px;
-	padding-left: 79px;
-	padding-right: 76px;
-	padding-bottom: 25px;
-
+	/* width: 434px; */
+	/* margin: 0 auto; */
+	padding-top: 20px;
+	padding-left: 15%;
+	padding-right: 15%;
+	/* padding-bottom: 25px; */
 }
 
 .offers-hottel-title {
@@ -359,8 +366,8 @@ input[type="radio"].visually-hidden {
 	font-size: 30px;
 	line-height: 36px;
 	font-weight: 700;
-
-	/*margin: 0;*/
+	/* margin: 0; */
+	margin-bottom: 24px;
 }
 
 .offers-hottel-descr {
@@ -368,8 +375,9 @@ input[type="radio"].visually-hidden {
 	font-size: 14px;
 	line-height: 24px;
 	font-weight: 400;
-
-	/*margin: 0;*/
+	/* margin: 0; */
+	margin-bottom: 47px;
+	/* padding-bottom:  45px; */
 }
 
 
@@ -381,20 +389,20 @@ input[type="radio"].visually-hidden {
 	line-height: 26px;
 	font-weight: 700;
 	text-align: center;
-	/*vertical-align: middle;*/
+	/* vertical-align: middle; */
 	border: none;
-
 	margin: 0 auto;
 	display: block;
-	width: 570px;
-	padding-top: 32px;
+	width: 568px;
+	padding-top: 30px;
 	padding-bottom: 30px;
+	position:  relative;
 }
 
 .offers-hottel-button:hover{
 	background-color: #604e43;
 }
- 
+
 .offers-hottel-button:active{
 	color:#847870;
 	background-color: #503e33;
@@ -404,17 +412,21 @@ input[type="radio"].visually-hidden {
 .popup-form-absolute {
 	background-color: #ffffff;
 	position: absolute;
-	left: 316px;
+	left: 50%;
+	margin-left: -284px;
+	/* top: 0; */
 	width: 568px;
-	height: 395px;
-	padding: 57px;
+	min-height: 395px;
+	padding: 56px 56px;
 	box-sizing: border-box;
+	box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
 }
 
 
 .popup-form-control{
 	display: flex;
-	margin-bottom: 30px;
+	margin-bottom: 29px;
+	justify-content: space-between;
 	align-items: center;
 }
 
@@ -433,17 +445,32 @@ input[type="radio"].visually-hidden {
 }
 
 .popup-form-control input{
-	/*box-sizing: border-box*/;
+	/*box-sizing: border-box*/
 	width: 346px;
-	padding-top: 3px;
-	padding-left: 15px;
-/*	padding-bottom: 6px;*/
+	padding: 0;
+	padding-left: 11px;
 }
 
+.popup-form-count {
+	display: flex;
+	/* margin-left: 38px; */
+}
+
+.popup-form-control-half .label-form-children {
+	margin-right: 25px;
+}
+
+.label-form-children label {
+	margin-right: 0;
+}
+
+{
+	margin-right: 0px;
+}
 
 .popup-form-count input{
 	box-sizing: border-box;
-	width: 114px;
+	width: 38px;
 	height: 38px;
 	text-align: center;
 }
@@ -457,10 +484,13 @@ input[type="radio"].visually-hidden {
 }
 
 .popup-form-control label {
-	width: 112px
+	width: 110px;
+	padding-right: 6px;
 }
 .popup-form-grid label {
-	width: 98px;
+	/* padding-right: 0px; */
+	/* width: 65px; */
+	margin-right: 40px;
 }
 
 
@@ -472,7 +502,10 @@ input[type="radio"].visually-hidden {
 	line-height: 26px;
 	background-color: #f2f2f2;
 	border:none;
+	height: 38px;
 }
+
+.popup-form-grid input{}
 
 .popup-form-control input::placeholder, 
 .popup-form-grid input::placeholder {
@@ -486,8 +519,10 @@ input[type="radio"].visually-hidden {
 }
 
 .popup-form-control input:focus {
-	border: 2px solid #e5e5e5;
+	/*border: 2px solid #e5e5e5;*/
+	box-shadow: inset 0 0 0 2px #e5e5e5;
 	background-color: #ffffff;
+	outline: none;
 }
 
 .popup-form-control {
@@ -529,7 +564,7 @@ input[type="radio"].visually-hidden {
 	border:none;
 	
 
-	position: absolute;
+	position: relative;
 	width: 38px;
 	height: 38px;
 	margin: 0;
@@ -537,12 +572,12 @@ input[type="radio"].visually-hidden {
 }
 
 .btn-min {
-	left: 98px;
+/*	left: 98px;*/
 }
 
 .btn-plus {
-	top: 0;
-	left: 174px;
+/*	top: 0;
+	left: 174px;*/
 }
 
 .btn-min::before,
@@ -565,7 +600,6 @@ input[type="radio"].visually-hidden {
 	transform: rotate(90deg);
 }
 
-
 .btn-min:hover::before,
 .btn-plus:hover::before,
 .btn-plus:hover::after {
@@ -578,7 +612,6 @@ input[type="radio"].visually-hidden {
 	background-color:#81b3d2;
 }
 
-
 .popup-form-submit {
 	color: #ffffff;
 	font-size: 21px;
@@ -587,15 +620,14 @@ input[type="radio"].visually-hidden {
 	background-color: #81b3d2;
 	border:none;
 	text-transform: uppercase;
-
-/*	position: absolute;*/
+	/*	position: absolute;*/
 	display: block;
 	width: 100%;
 	padding-top: 18px;
 	padding-bottom: 15px;
-	margin-top: 65px;
-/*	height: 58px;*/
-/*	top: 281px;
+	margin-top: 53px;
+	/* height: 58px; */
+	/*	top: 281px;
 	left: 55px;*/
 }
 
@@ -612,16 +644,14 @@ input[type="radio"].visually-hidden {
 .main-footer {
 	color: #000000;
 	background-color: rgba(255, 255, 255, 0.9);
-/*	text-align: center;*/
-
+	text-align: center;
 	display: flex;
-	justify-content: space-around;
+	/* justify-content: center; */
 	align-items: center;
 	flex-wrap: wrap;
-	margin-top: -120px;
+	margin-top: -127px;
 	position: relative;
-
-	min-height: 120px;
+	min-height: 122px;
 }
 
 .main-footer-slogan {
@@ -631,38 +661,37 @@ input[type="radio"].visually-hidden {
 	line-height: 26px;
 
 	width: 136px;
-/*	width: 33.333%;*/
+	width: 33.333%;
 	margin: 0;
 }
-
 
 
 .main-footer-social{
 	list-style: none;
 	padding: 0;
-	margin: 0;
-
+	margin: 0 auto;
 	width: 150px;
-/*	width: 33.333%;*/
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-/*	margin: 0 auto;*/
+	/* margin: 0 auto; */
 /*Обнулим внутренние отступы у списка и отцентруем его с помощью внешних отступов.*/
+	/* justify-content: center; */
+	align-items: center;
 }
 
 .main-footer-list{
 }
 
-.footer-copyright {
-	width: 198px;
-/*	width: 33.333%;*/
-	display: flex;
-	
-	justify-content: space-between;
-	align-items: center;
-}
+.footer-copyright {/*	width: 198px;*/width: 33.333%;display: flex;justify-content: center;align-items: center;}
 
+.footer-copyright-text {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 26px;
+
+	margin-right: 10px;
+}
 
 .social-btn {
 	width: 46px;
@@ -716,14 +745,6 @@ input[type="radio"].visually-hidden {
 	opacity: 0.3;
 }
 
-.footer-copyright-text {
-	font-size: 14px;
-	font-weight: 400;
-	line-height: 26px;
-
-	margin: 0px;
-}
-
 .footer-copyright-logo:hover path {
 	fill: #81b3d2;
 }
@@ -734,6 +755,10 @@ input[type="radio"].visually-hidden {
 
 
 /*вторая страница */
+
+.main-navigation-link a:not([href]){
+	color: #766357;
+}
 
 .filters-form {
 	background-color: #81b3d2;
@@ -748,6 +773,8 @@ input[type="radio"].visually-hidden {
 	font-size: 16px;
 	font-weight: 700;
 	line-height: 21px;
+
+	margin: 0;
 }
 
 .form-catalog {
@@ -798,7 +825,10 @@ input[type="radio"].visually-hidden {
 }
 
 .find {
-
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
 }
 
 .find-title {
@@ -806,6 +836,8 @@ input[type="radio"].visually-hidden {
 	font-size: 21px;
 	font-weight: 700;
 	line-height: 26px;
+
+	margin: 0;
 }
 
 .find-items {
@@ -813,31 +845,50 @@ input[type="radio"].visually-hidden {
 	font-size: 12px;
 	font-weight: 400;
 	line-height: 18px;
-	list-style: none
+	list-style: none;
+
+	margin:0;
+	padding:0;
+	padding-left: 10px;
+	padding-right: 10px;
+	display: flex;
+	width: 353px;
+	justify-content: space-between;
 }
 
 
-.find-item a {
+.find-item-link{
 	color: #b2b2b2;
-	/* Задал класс для ссылок find-item-link, пытался на них влиять через напрямую класс, но вышло только через родителя, правильно? */
+
 }
 
-.find-item a:hover {
+.find-item-link:hover {
 	color: #81b3d2;
 }
 
-.find-item a:active {
+.find-item-link:active {
 	color: #000000;
 }
 
-/*
-.find-current a:visited {
+
+.find-item-link.find-current{
 	color: #81b3d2;
-	Попытался задать цвет голубой для цены, добавил дополнительный класс, не получилось. Точно так же как и пунктом меню Навигация*/
+
+}
 
 .find-items-empty {
-	list-style: none
+	list-style: none;
+
+	margin:0;
+	padding:0;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
+
+
+
 
 .hottel-item-title {
 	color: #000000;
