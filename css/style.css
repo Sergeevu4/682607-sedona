@@ -1,3 +1,4 @@
+
 *, *::before, *::after {
 	box-sizing: inherit;
 }
@@ -197,7 +198,7 @@ input[type="radio"].visually-hidden {
 }
 
 .advantages-block-number {
-/*	display: block;*/
+/* display: block;*/
 
 }
 
@@ -331,6 +332,7 @@ input[type="radio"].visually-hidden {
 
 .offers-hotel {
 	background-color: #ffffff;
+	position: relative;
 }
 
 
@@ -384,13 +386,9 @@ input[type="radio"].visually-hidden {
 
 .popup-form-absolute {
 	display: none;
-	position: relative;
-}
-
-.popup-form {
 	position: absolute;
 	left: 50%;
-	top: 0;
+	top: 100%;
 	margin-left: -284px;
 	width: 568px;
 	min-height: 395px;
@@ -398,6 +396,7 @@ input[type="radio"].visually-hidden {
 	background-color: #ffffff;
 	box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
 }
+
 
 .popup-form-control{
 	display: flex;
@@ -455,7 +454,6 @@ input[type="radio"].visually-hidden {
 	font-weight: 700;
 	line-height: 26px;
 }
-
 .popup-form-control label {
 	width: 110px;
 	padding-left: 2px;
@@ -604,12 +602,13 @@ input[type="radio"].visually-hidden {
 	background-color: rgba(255, 255, 255, 0.9);
 	text-align: center;
 	display: flex;
-	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
-	margin-top: -127px;
+	margin-top: -121px;
 	position: relative;
-	min-height: 123px;
+	padding: 35px 0;
+	margin: 0;
+
 }
 
 .main-footer-slogan {
@@ -773,9 +772,10 @@ input[type="radio"].visually-hidden {
 	padding:0;
 	margin:0;
 	list-style: none;
-	display: flex;
-	flex-direction: column;
-	align-items: baseline;
+	/* display: flex; */
+	/* flex-direction: column; */
+	/* align-items: baseline; */
+	text-align:  left;
 }
 
 
@@ -1152,7 +1152,7 @@ display: flex;
 	margin: 0;
 }
 
-.popup-form-open {
+.popup-form-show {
 	display: block;
 	animation: bounce 0.5s ease;
 	animation-iteration-count: 1;
