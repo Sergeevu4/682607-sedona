@@ -1,6 +1,5 @@
 var button = document.querySelector('.offers-hotel-button');
 var popup = document.querySelector('.popup-form-absolute');
-// var formArrival = popup.querySelector('.form-arrival');
 var form = popup.querySelector('.popup-form');
 
 var arrival = form.querySelector ('.form-arrival');
@@ -8,7 +7,6 @@ var leave = form.querySelector ('.form-leave');
 
 var formPeople = form.querySelector('.form-people');
 var formChildren = form.querySelector('.form-children');
-
 
 var adultsLess = form.querySelector('[id=adults-less]');
 var childLess = form.querySelector('[id=child-less]');
@@ -21,7 +19,7 @@ button.addEventListener('click', function (evt) {
 	evt.preventDefault();
 	popup.classList.toggle('popup-form-show');
 	popup.classList.remove('popup-form-error');
-	formArrival.focus();
+	arrival.focus();
 });
 
 form.addEventListener('submit', function (evt) {
@@ -46,16 +44,16 @@ window.addEventListener('keydown', function (evt) {
 adultsLess.addEventListener('click', function (event) {
 	event.preventDefault();
 	var num = parseInt(formPeople.value, 10);
-		if (num >= 2) {
-			formPeople.value = num - 1;
+	if (num >= 2) {
+		formPeople.value = num - 1;
 	}
 });
 
 childLess.addEventListener('click', function (event) {
 	event.preventDefault();
 	var num = parseInt(formChildren.value, 10);
-		if (num >= 1) {
-			formChildren.value = num - 1;
+	if (num >= 1) {
+		formChildren.value = num - 1;
 	}
 });
 
